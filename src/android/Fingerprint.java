@@ -381,8 +381,7 @@ public class Fingerprint extends CordovaPlugin {
             if (withFingerprint) {
                 // If the user has authenticated with fingerprint, verify that using cryptography and
                 // then return the encrypted token
-                byte[] encrypted = tryEncrypt();
-                resultJson.put("withFingerprint", Base64.encodeToString(encrypted, 0 /* flags */));
+                resultJson.put("withFingerprint", true);
             } else {
                 // Authentication happened with backup password.
                 resultJson.put("withPassword", true);
