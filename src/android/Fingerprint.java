@@ -392,10 +392,6 @@ public class Fingerprint extends CordovaPlugin {
                 }
             }
             createdResultJson = true;
-        } catch (BadPaddingException e) {
-            errorMessage = "Failed to encrypt the data with the generated key:" +
-                    " BadPaddingException:  " + e.getMessage();
-            Log.e(TAG, errorMessage);
         } catch (IllegalBlockSizeException e) {
             errorMessage = "Failed to encrypt the data with the generated key: " +
                     "IllegalBlockSizeException: " + e.getMessage();
