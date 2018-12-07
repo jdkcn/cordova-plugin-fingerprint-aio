@@ -392,10 +392,6 @@ public class Fingerprint extends CordovaPlugin {
                 }
             }
             createdResultJson = true;
-        } catch (IllegalBlockSizeException e) {
-            errorMessage = "Failed to encrypt the data with the generated key: " +
-                    "IllegalBlockSizeException: " + e.getMessage();
-            Log.e(TAG, errorMessage);
         } catch (JSONException e) {
             errorMessage = "Failed to set resultJson key value pair: " + e.getMessage();
             Log.e(TAG, errorMessage);
